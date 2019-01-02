@@ -1,6 +1,6 @@
 {
-  "name": "homebridge-ewelink-ramsesz",
-  "version": "0.1.9",
+  "name": "homebridge-ramsesz-ewelink",
+  "version": "0.1.11",
   "author": "ramses zeulevoet",
   "contributors": [
     "Tomasz Bzymek",
