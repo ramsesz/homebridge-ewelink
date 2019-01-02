@@ -399,11 +399,34 @@ eWeLink.prototype.addAccessory = function(device, deviceId = null) {
         callback();
     });
 
-    accessory.getService(Service.AccessoryInformation).setCharacteristic(Characteristic.SerialNumber, device.extra.extra.mac);
-    accessory.getService(Service.AccessoryInformation).setCharacteristic(Characteristic.Manufacturer, device.productModel);
-    accessory.getService(Service.AccessoryInformation).setCharacteristic(Characteristic.Model, device.extra.extra.model);
-    accessory.getService(Service.AccessoryInformation).setCharacteristic(Characteristic.Identify, false);
-    accessory.getService(Service.AccessoryInformation).setCharacteristic(Characteristic.FirmwareRevision, device.params.fwVersion);
+
+    try {
+        accessory.getService(Service.AccessoryInformation).setCharacteristic(Characteristic.SerialNumber, device.extra.extra.mac);
+    }catch (e) {
+        this.log(e);
+    }
+    
+    try {
+        accessory.getService(Service.AccessoryInformation).setCharacteristic(Characteristic.Manufacturer, device.productModel);
+    }catch (e) {
+        this.log(e);
+    }
+    try {
+        accessory.getService(Service.AccessoryInformation).setCharacteristic(Characteristic.Model, device.extra.extra.model);
+    }catch (e) {
+        this.log(e);
+    }
+    try {
+        accessory.getService(Service.AccessoryInformation).setCharacteristic(Characteristic.Identify, false);
+    }catch (e) {
+        this.log(e);
+    }
+    try {
+        accessory.getService(Service.AccessoryInformation).setCharacteristic(Characteristic.FirmwareRevision, device.params.fwVersion);
+    }catch (e) {
+        this.log(e);
+    }
+
 
     switch(device.extra.extra.model) {
         case 'PSF-B04-GL' :
