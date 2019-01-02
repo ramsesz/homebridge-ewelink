@@ -1,12 +1,13 @@
 {
-  "name": "homebridge-ewelink-max",
+  "name": "homebridge-ewelink-ramsesz",
   "version": "0.1.9",
-  "author": "gbro115",
+  "author": "ramses zeulevoet",
   "contributors": [
     "Tomasz Bzymek",
-    "howanghk"
+    "howanghk",
+    "gbro115"
   ],
-  "description": "homebridge-eWeLink is a Homebrige plugin to control Sonoff relays running OEM firmware",
+  "description": "homebridge-eWeLink-ramsesz is an updated fork of a fork of a Homebrige plugin to control Sonoff relays running OEM firmware",
   "license": "MIT",
   "keywords": [
     "homebridge-plugin",
